@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/logooo.png" type="image/x-icon">
+  <title>Recupera contraseña</title>
+  <link rel="stylesheet" href="css/recupera.css">
+</head>
+
+<body>
+  <img src="img/logooo.png" alt="Logo" class="custom-size">
+  <button id="logoutButton" class="logoutButton">Salir</button>
+
+  <div class="hero">
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+  </div>
+
+  <div id="overlay" class="overlay"></div>
+    <div id="Contendor" class="Contendor">
+        <div id="mensaje" class="message">
+            <p id="mensaje-texto"></p>
+            <button id="cerrar-mensaje" class="close-button">Cerrar</button>
+        </div>
+    </div>
+
+  <div class="container">
+    <div class="container-form">
+      <form name="sign-in" class="sign-in" method="post" action="RecuperarContra">
+        <h2>Recupera la contraseña</h2>
+        <span>Use su correo y complete el paso a paso</span>
+
+        <div class="container-input">
+          <ion-icon name="mail-outline"></ion-icon>
+          <input type="email" id="emaiRecu" name="emaiRecu" placeholder="Email" required>
+        </div>
+
+        <div class="container-input">
+          <ion-icon name="key-outline"></ion-icon>
+          <input type="number" id="codiConf" name="codiConf" placeholder="Confirmation Code" >
+          <button class="button-small" id="sendCodeButton" type="submit" name="accion" value="generarCodigo">Enviar Código</button>
+        </div>
+
+      
+        <div class="container-input">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input type="password" id="passNew" name="passNew" placeholder="New Password" >
+        </div>
+
+        <div class="container-input">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input type="password" id="passConfirm" name="passConfirm" placeholder="Confirm Password" >
+        </div>
+
+        <button class="button" type="submit">Enviar</button>
+       
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="js/recupera.js"></script>
+</body>
+
+</html>

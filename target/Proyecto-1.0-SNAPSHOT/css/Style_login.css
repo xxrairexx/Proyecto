@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: url(../img/shubham-dhage-5sWL3GQ5iCc-unsplash.jpg) no-repeat center center;
+    background-size: cover;
+    align-items: center;
+    position: relative;
+    overflow: hidden;  
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: none;
+   
+}
+
+.overlay.active {
+    display: block;
+}
+
+.Contendor {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid #b336f6;
+    padding: 20px;
+    box-shadow: 0 2px 4px #b336f6c3;
+    z-index: 20;
+    display: none;
+}
+
+.Contendor.active {
+    display: block;
+}
+
+.message p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.message {
+    text-align: center;
+}
+
+.close-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #a367bd;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Resto del estilos */
+.container {
+    width: 800px;
+    height: 500px;
+    display: flex;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.758);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(214, 0, 200, 0.765);
+}
+
+.container-form {
+    width: 100%;
+    overflow: hidden;
+}
+
+.container-form form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in;
+
+}
+
+.container-form h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.social-networks {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.social-networks ion-icon {
+    border: 1px solid #b336f6;
+    border-radius: 6px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.container-form span {
+    font-size: 12px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+.container-input {
+    width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 0 15px;
+    background-color: #000000;
+    color: white;
+}
+
+
+.container-input input {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    color: white;
+    
+}
+
+.container-input input::placeholder {
+    color: #ffffff; 
+}
+
+.container-form a {
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.button {
+    width: 170px;
+    height: 45px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #a367bd;
+    color: rgb(0, 0, 0);
+}
+
+/* Animation form */
+.sign-up {
+    transform: translateX(-100%);
+}
+
+.container.toggle .sign-in {
+    transform: translateX(100%);
+}
+
+.container.toggle .sign-up {
+    transform: translateX(0);
+}
+
+/* Welcome */
+.container-welcome {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transform: translateX(100%);
+    background-color: rgb(95, 12, 159);
+    transition: transform 0.5s ease-in-out, border-radius 0.5s ease-in-out;
+    overflow: hidden;
+    border-radius: 50% 0 0 50%;
+}
+
+.container.toggle .container-welcome {
+    transform: translateX(0);
+    border-radius: 0 50% 50% 0;
+    background-color: rgb(189, 53, 130);
+}
+
+.container-welcome .welcome {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 50px;
+    color: white;
+    transition: transform 0.5s ease-in-out;
+}
+
+.welcome-sign-in {
+    transform: translateX(100%);
+}
+
+.container-welcome h3 {
+    font-size: 40px;
+}
+
+.container-welcome p {
+    font-size: 14px;
+    text-align: center;
+}
+
+.container-welcome .button {
+    border: 2px solid rgb(255, 255, 255);
+    background-color: transparent;
+    color: white;
+}
+
+.container.toggle .welcome-sign-in {
+    transform: translateX(0);
+}
+
+.container.toggle .welcome-sign-up {
+    transform: translateX(-100%);
+}
+
+.custom-size {
+    width: 60px;
+    height: 62px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/*repostorios*/
+
+input:-webkit-autofill {
+    background-color: #000000 !important;
+    color: white !important;
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-webkit-autofill:focus {
+    background-color: #000000 !important;
+    color: white !important;
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-webkit-autofill::first-line {
+    color: white !important;
+}
+    
+
+.cube {
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    border: solid 1px #860098;
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    -webkit-animation: cube 12s ease-in forwards infinite;
+    animation: cube 12s ease-in forwards infinite;
+}
+
+.cube:nth-child(2n) {
+    border-color: #7600f4;
+}
+
+.cube:nth-child(2) {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    left: 25vw;
+    top: 40vh;
+}
+
+.cube:nth-child(3) {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+    left: 75vw;
+    top: 50vh;
+}
+
+.cube:nth-child(4) {
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+    left: 90vw;
+    top: 10vh;
+}
+
+.cube:nth-child(5) {
+    -webkit-animation-delay: 8s;
+    animation-delay: 8s;
+    left: 10vw;
+    top: 85vh;
+}
+
+.cube:nth-child(6) {
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
+}
+
+@-webkit-keyframes cube {
+    from {
+        -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    to {
+        -webkit-transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+@keyframes cube {
+    from {
+        -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    to {
+        -webkit-transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        opacity: 0;
+    }
+}

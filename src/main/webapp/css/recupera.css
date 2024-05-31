@@ -1,0 +1,318 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: url(../img/shubham-dhage-5sWL3GQ5iCc-unsplash.jpg) no-repeat center center;
+    background-size: cover;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.Contendor {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid #b336f6;
+    padding: 20px;
+    box-shadow: 0 2px 4px #b336f6c3;
+    z-index: 20;
+    display: none;
+}
+
+.Contendor.active {
+    display: block;
+}
+
+.message p {
+    margin: 10px 0;
+    padding: 0;
+}
+
+.message {
+    text-align: center;
+}
+
+.close-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #a367bd;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.logoutButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #a367bd;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.container {
+    width: 530px;
+    height: 420px;
+    display: flex;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(179, 54, 246, 0.765);
+}
+
+.container-form {
+    width: 100%;
+    overflow: hidden;
+}
+
+.container-form form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-form h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.container-form span {
+    font-size: 12px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+
+.container-input {
+    position: relative;
+    width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 0 15px;
+    background-color: #000000;
+    color: white;
+}
+
+.container-input #codiConf {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    color: white;
+    margin-left: 25px;
+}
+
+.container-input input {
+    border: none;
+    outline: none;
+    width: calc(100% - 40px);
+    height: 100%;
+    background-color: inherit;
+    color: white; 
+}
+
+.container-form ion-icon {
+    position: absolute;
+    left: 10px; /* Ajusta la posición del icono según tus necesidades */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px; /* Tamaño del icono ajustable según tus necesidades */
+}
+
+.button-small {
+    width: 120px;
+    font-size: 12px; 
+    margin-right: 10px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #a367bd;
+    color: rgb(0, 0, 0);
+}
+
+.container-input input::placeholder {
+    color: #ffffff; 
+}
+
+.button {
+    width: 170px;
+    height: 45px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #a367bd;
+    color: rgb(0, 0, 0);
+}
+
+.custom-size {
+    width: 60px;
+    height: 62px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Repositories */
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+/* Para Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input:-webkit-autofill {
+    background-color: #000000 !important;
+    color: white !important;
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-webkit-autofill:focus {
+    background-color: #000000 !important;
+    color: white !important;
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-webkit-autofill::first-line {
+    color: white !important;
+}
+    
+
+.cube {
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    border: solid 1px #5f07a7;
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    -webkit-animation: cube 12s ease-in forwards infinite;
+    animation: cube 12s ease-in forwards infinite;
+}
+
+.cube:nth-child(2n) {
+    border-color: #470f56;
+}
+
+.cube:nth-child(2) {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    left: 25vw;
+    top: 40vh;
+}
+
+.cube:nth-child(3) {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+    left: 75vw;
+    top: 50vh;
+}
+
+.cube:nth-child(4) {
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+    left: 90vw;
+    top: 10vh;
+}
+
+.cube:nth-child(5) {
+    -webkit-animation-delay: 8s;
+    animation-delay: 8s;
+    left: 10vw;
+    top: 85vh;
+}
+
+.cube:nth-child(6) {
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
+}
+
+@-webkit-keyframes cube {
+    from {
+        -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    to {
+        -webkit-transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+@keyframes cube {
+    from {
+        -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    to {
+        -webkit-transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
